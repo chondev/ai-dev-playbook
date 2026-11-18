@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "chromium",
+        "--isolated",
+        "--headless"
+      ]
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "${NOTION_TOKEN}"
+      }
+    },
+    "database": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@example/db-readonly-mcp"
+      ],
+      "env": {
+        "DB_HOST": "${DB_HOST}",
+        "DB_PORT": "${DB_PORT}",
+        "DB_NAME": "${DB_NAME}",
+        "DB_USER": "${DB_READONLY_USER}",
+        "DB_PASSWORD": "${DB_READONLY_PASSWORD}",
+        "DB_READONLY": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# 프로젝트별 로컬 설정
+/PROJECT.md
+.env
+.env.*
+.mcp.json
+!.mcp.example.json
+*.local.json
+*.ini
+!*.example.ini
+
+# 로컬 실행·빌드·가상환경 산출물
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+logs/
+tmp/
+target/
+bin/
+dist/
+
+# 증거·리포트·대용량 바이너리 산출물
+**/단위테스트_실행증거_*/
+screenshots/
+*.xlsx
+*.png
+*.jpg
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
